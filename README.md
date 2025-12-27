@@ -1,15 +1,18 @@
 # buntp
+🧅 A simple NTP client implementation for Bun
 
-To install dependencies:
+This implementation was done following the [RFC 4330](https://datatracker.ietf.org/doc/html/rfc4330).
 
-```bash
-bun install
+## Installation
+```sh
+bun add buntp
 ```
 
-To run:
+## Usage
+```typescript
+import { NTPClient } from "buntp";
 
-```bash
-bun run index.ts
+const client = new NTPClient("your ntp server address");
+let date = await client.sync(); // Returning a Date object
+let rawRes = await client.rawSync(); // Returning a Packet object (see definition at src/models.ts)
 ```
-
-This project was created using `bun init` in bun v1.3.4. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.

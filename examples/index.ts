@@ -4,7 +4,7 @@ import { NTPClient } from "../src";
 const client = new NTPClient("134.214.100.6");
 
 // Raw sync
-console.log(await client.syncRaw());
+console.log(await client.rawSync());
 
 // Sync
 console.log(await client.sync());

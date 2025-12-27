@@ -37,7 +37,7 @@ export class NTPClient {
         this.address = address;
     }
 
-    async syncRaw(): Promise<Packet> {
+    async rawSync(): Promise<Packet> {
         return await makeRequest(this.address);
     }
 
