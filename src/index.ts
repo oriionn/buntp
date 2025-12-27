@@ -37,11 +37,11 @@ export class NTPClient {
         this.address = address;
     }
 
-    async syncRaw() {
+    async syncRaw(): Promise<Packet> {
         return await makeRequest(this.address);
     }
 
-    async sync() {
+    async sync(): Promise<Date> {
         let res = await makeRequest(this.address);
         let second = res.transmitTimestamp.seconds - Number(NTP_EPOCH);
         let ms = Math.floor((res.transmitTimestamp.fraction * 1000) / Math.pow(2, 32));

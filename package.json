@@ -1,10 +1,33 @@
 {
   "name": "buntp",
+  "version": "1.0.0",
+  "description": "🧅 A simple NTP client implementation for Bun",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/oriionn/buntp.git"
+  },
+  "homepage": "https://github.com/oriionn/buntp",
+  "author": {
+      "name": "oriionn",
+      "url": "https://oriondev.fr"
+  },
   "module": "src/index.ts",
   "type": "module",
-  "private": true,
+  "scripts": {
+      "build": "bunup"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+      ".": {
+          "import": "./dist/index.js",
+          "types": "./dist/index.d.ts"
+      }
+  },
+  "files": ["dist"],
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "bunup": "^0.16.11"
   },
   "peerDependencies": {
     "typescript": "^5"
