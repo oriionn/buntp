@@ -5,6 +5,11 @@ export class NTPClient {
     address: string;
     timeout: number;
 
+    /**
+     *
+     * @param {string} address    Address of the NTP server
+     * @param {number} [ttl=5000] Timeout for sync requests (in milliseconds)
+     */
     constructor(address: string, ttl: number = 5000) {
         this.address = address;
         this.timeout = ttl;
