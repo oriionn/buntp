@@ -3,8 +3,6 @@
 
 This implementation was done following the [RFC 4330](https://datatracker.ietf.org/doc/html/rfc4330).
 
-PS: this is my first from scratch implementation, please be indulgent with me 🥺
-
 ## Installation
 ```sh
 bun add buntp
